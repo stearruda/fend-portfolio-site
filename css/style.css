@@ -1,0 +1,223 @@
+*, 
+::after, 
+::before {
+	box-sizing: border-box;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+	color: #4a4a51;
+	font-family: 'Open Sans', sans-serif;
+}
+
+/* HEADER */
+
+header {
+	border-bottom: 3px solid #b2827a;
+	text-align: center;
+	padding: 20px 0;
+}
+
+header img {
+	max-width: 70px;
+	width: 50%;
+}
+
+.header__name > * {
+	text-transform: uppercase;
+	margin: 0;
+}
+
+.header__name h1 {
+	font-family: 'Dosis', sans-serif;
+	font-weight: normal;
+}
+
+
+
+/* MAIN PHOTO */
+
+main {
+	min-height: 100%;
+}
+
+.main__photo {
+	margin: 20px 0;
+	background: url(../img/main-photo_.jpeg) no-repeat top;
+	background-size: cover;
+	height: 380px;
+}
+
+
+/* SECTION: WORK */
+
+.section__work {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.section__work h2 {
+	font-weight: normal;
+	color: #fff;
+	background-color: #b2827a;
+	width: 100%;
+	padding: 5px 7px;
+	font-size: 1.2em;
+}
+
+.project {
+	width: 100%;
+}
+
+.project img {
+	max-width: 100%;
+}
+
+.project h3 {
+	height: 20px;
+	margin: 10px 0 35px;
+}
+
+/* UNDERLINE EFFECT ON TEXT FOLLOWING INSTRUCTIONS OF TOBIAS AHLIN
+ (http://tobiasahlin.com/blog/css-trick-animating-link-underlines/) */
+.project h3 > a {
+	font-weight: normal;
+	text-transform: uppercase;
+	text-decoration: none;
+	position: relative;
+	color: #a56a82;
+	font-size: 0.9em;
+}
+
+.project h3 > a:hover{
+	color: #a56a82;
+}
+
+.project h3 > a:before{
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 2px;
+	top: -5px;
+	left: 0;
+	background-color: #4a4a51;
+	visibility: hidden;
+	transform: scaleX(0);
+	transition: all 0.3s ease-in-out 0s;
+}
+
+.project h3 > a:hover:before{
+	visibility: visible;
+	transform: scaleX(1);
+}
+
+
+/* FOOTER */
+
+footer {
+	background-color: #4a4a51;
+	width: 100%;
+	padding: 2px;
+	text-align: center;
+}
+
+footer p {
+	color: #858591;
+	font-size: 0.9em;
+}
+
+
+/* MEDIA QUERIES */
+
+@media screen and (min-width: 440px) {
+	body {
+		width: 80%;
+		margin: 0 auto;
+	}
+
+	header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	header img {
+		max-width: 130px;
+	}
+
+	.header__name {
+		text-align: right;
+	}
+
+	.header__name h2 {
+		font-size: 4vw;
+	}
+
+	.section__work h2 {
+		width: 100%;
+		text-align: center;
+	}
+}
+
+@media screen and (min-width: 580px) and (max-width: 780px) {
+	.header__name h1 {
+		font-size: 6vw;
+	}
+
+	.header__name h2 {
+		font-size: 3vw;
+	}
+
+	.section__work {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.section__work h2 {
+		text-align: center;
+	}
+
+	.project {
+		width: 48%;
+		margin-bottom: 10px;
+	}
+
+	.tribute-page {
+		margin: 0 auto;
+	}
+}
+
+@media screen and (min-width: 781px) {
+	.header__name h1 {
+		font-size: 4vw;
+	}
+
+	.header__name h2 {
+		font-size: 2vw;
+	}
+
+	.section__work {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+
+	.section__work h2 {
+		text-align: left;
+	}
+
+	.project {
+		width: calc(33.333% - 10px);
+	}
+}
