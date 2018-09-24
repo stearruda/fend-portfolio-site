@@ -1,4 +1,4 @@
 # Portfolio site
 
 # Live Portfolio
-https://stearruda.github.io/portfolio-site/
+https://stearruda.github.io/fend-portfolio-site/
